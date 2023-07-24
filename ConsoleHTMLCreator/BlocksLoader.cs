@@ -9,7 +9,7 @@ namespace ConsoleHTMLCreator
     static class BlocksLoader
     {
         public static List<Blocks> Basic { get; set; } = loadBlocks("Basic");
-        public static List<Blocks> Responsive { get; set; } = loadBlocks("Flex");
+        public static List<Blocks> Responsive { get; set; } = loadBlocks("Responsive");
 
         static List<Blocks> loadBlocks(string fileLocation)
         {
@@ -25,7 +25,6 @@ namespace ConsoleHTMLCreator
                 sr.Close();
             }
             return aux;
-            
         }
     }
 }

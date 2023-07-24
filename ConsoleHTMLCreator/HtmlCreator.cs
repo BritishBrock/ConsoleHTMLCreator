@@ -24,7 +24,7 @@ namespace ConsoleHTMLCreator
         public static void createHTMLFile()
         {
             StringBuilder file = new StringBuilder();
-            file.AppendLine("<html>");
+            file.Append("<html><head></head><body>");
             for(int i = 0; i < HtmlSections.Length; i++)
             {
                 if (HtmlSections[i] != null)
@@ -32,7 +32,7 @@ namespace ConsoleHTMLCreator
                     file.Append(HtmlSections[i].SectionBlock.Content);
                 }
             }
-            file.AppendLine("<html>");
+            file.Append("</body></html>");
             saveHTMLFile(file.ToString());
         }
 
@@ -41,6 +41,9 @@ namespace ConsoleHTMLCreator
             string blockType = Console.ReadLine().ToLower();
              switch (blockType){
                 case "basic" :
+                    setSectionWithBlock(showBlocks(BlocksLoader.Basic), index);
+                    break;
+                case "responsive":
                     setSectionWithBlock(showBlocks(BlocksLoader.Basic), index);
                     break;
             };
