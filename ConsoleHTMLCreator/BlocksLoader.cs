@@ -25,6 +25,7 @@ namespace ConsoleHTMLCreator
                 sr.Close();
             }
             return aux;
+            HtmlCreator.createHTMLFile();
         }
     }
 }
