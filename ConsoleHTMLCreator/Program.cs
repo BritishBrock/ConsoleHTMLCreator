@@ -1,8 +1,12 @@
-﻿namespace ConsoleHTMLCreator
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
+namespace ConsoleHTMLCreator
 {
     internal class Program{
 
+        public static Process p = new Process();
         static void Main() {
+
 
             Console.WriteLine("how many sections do you want");
             int amountSections = int.Parse(Console.ReadLine());
@@ -21,6 +25,7 @@
                 exit = Console.ReadLine();
             } while (exit.ToLower() != "yes");
             HtmlCreator.createHTMLFile();
+
         }
     
     }

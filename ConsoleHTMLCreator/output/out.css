@@ -1,4 +1,8 @@
-*{margin:0;padding:0;box-sizing:border-box} html,body{height:100%;width:100%}.section-responsive-0{
+*{margin:0;padding:0;box-sizing:border-box} html,body{height:100%;width:100%}.section-basic-0{
+	width:100%;
+	height:10%;
+	background-color:gray;
+}.section-responsive-0{
 	display:flex;
 	justify-content:space-around;
 	height:100%;

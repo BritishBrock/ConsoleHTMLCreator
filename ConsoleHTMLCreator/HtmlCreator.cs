@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
@@ -19,9 +20,16 @@ namespace ConsoleHTMLCreator
             outputWriter.Write(file);
             outputWriter.Close();
             saveCSSFile();
+            Program.p.Close();
+            Program.p.StartInfo = new ProcessStartInfo("C:\\projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\output\\out.html")
+            {
+                UseShellExecute = true
+            };
+            Program.p.Start();
         }
         private static void saveCSSFile()
         {
+            
             string output = "C:\\projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\output\\out.css";
             StreamWriter outputWriter = new StreamWriter(output);
             outputWriter.Write(CssCreator.getCssFromBoxes(  Section.HtmlSections));
