@@ -38,9 +38,9 @@ namespace ConsoleHTMLCreator
 
         public static void editSection(int index) {
             Console.WriteLine("What Block Would you like to add to this section: basic");
-            string blockType = Console.ReadLine();
+            string blockType = Console.ReadLine().ToLower();
              switch (blockType){
-                case "Basic" :
+                case "basic" :
                     setSectionWithBlock(showBlocks(BlocksLoader.Basic), index);
                     break;
             };

@@ -13,7 +13,7 @@ namespace ConsoleHTMLCreator
 
         static List<Blocks> loadBlocks(string fileLocation)
         {
-            string route = "C:\\Users\\Brock\\source\\repos\\CreadorDePlantillaHtml\\CreadorDePlantillaHtml\\webBlocks\\" + fileLocation + "\\";
+            string route = "C:\\projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\webBlocks\\" + fileLocation + "\\";
             List<Blocks> aux = new List<Blocks>();
             int index = 0;
             StreamReader sr;
