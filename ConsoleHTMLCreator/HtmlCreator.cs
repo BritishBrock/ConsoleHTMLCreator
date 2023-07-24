@@ -24,7 +24,7 @@ namespace ConsoleHTMLCreator
         public static void createHTMLFile()
         {
             StringBuilder file = new StringBuilder();
-            file.Append("<html><head></head><body>");
+            file.Append("<html><head><style>*{margin:0;padding:0;box-sizing:border-box} ºhtml,body{height:100%;width:100%}</style></head><body>");
             for(int i = 0; i < HtmlSections.Length; i++)
             {
                 if (HtmlSections[i] != null)
@@ -37,14 +37,14 @@ namespace ConsoleHTMLCreator
         }
 
         public static void editSection(int index) {
-            Console.WriteLine("What Block Would you like to add to this section: basic");
+            Console.WriteLine("What Block Would you like to add to this section: basic or responsive");
             string blockType = Console.ReadLine().ToLower();
              switch (blockType){
                 case "basic" :
                     setSectionWithBlock(showBlocks(BlocksLoader.Basic), index);
                     break;
                 case "responsive":
-                    setSectionWithBlock(showBlocks(BlocksLoader.Basic), index);
+                    setSectionWithBlock(showBlocks(BlocksLoader.Responsive), index);
                     break;
             };
         }
