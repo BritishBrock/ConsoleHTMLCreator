@@ -1,0 +1,3 @@
+<div class="section-basic-0">
+	<h1>Default Text</h1>
+</div>

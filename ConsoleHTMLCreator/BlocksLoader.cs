@@ -20,7 +20,12 @@ namespace ConsoleHTMLCreator
             while (File.Exists(route + index + ".txt"))
             {
                 sr = new StreamReader(route + index + ".txt");
-                aux.Add(new Blocks(fileLocation + "_" + index, sr.ReadToEnd()));
+                string content = sr.ReadToEnd();
+                sr = new StreamReader(route + index + ".css.txt");
+                string css = sr.ReadToEnd();
+                sr = new StreamReader(route + index + ".visual.txt");
+                string visual = sr.ReadToEnd();
+                aux.Add(new Blocks(fileLocation + "_" + index, content,css,visual));
                 index++;
                 sr.Close();
             }

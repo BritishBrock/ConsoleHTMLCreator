@@ -50,10 +50,27 @@ namespace ConsoleHTMLCreator
         }
 
         public static Blocks showBlocks(List<Blocks> blocks) {
-            Console.WriteLine("What Block Would you like to add to this section: basic");
-            for (int i = 0; i < blocks.Count; i++) {
-                Console.WriteLine(i +" - "+ blocks[i].Name);
+            int index = 0;
+            string movement;
+            do {
+                Console.Clear();
+                int count = 0;
+                 if (blocks.Count != null) count = blocks.Count;
+                Console.WriteLine(Math.Abs(index) % blocks.Count + "/" +( count - 1));
+                Console.WriteLine(blocks[Math.Abs(index )% blocks.Count].Name);
+                Console.WriteLine(blocks[Math.Abs(index) % blocks.Count].Visual);
+                Console.WriteLine("<<< >>>");
+                movement = Console.ReadLine();
+                if(movement.ToLower() == "left")index--;
+                if (movement.ToLower() == "right") index++;
+
+            } while (movement.ToLower() != "back");
+            Console.WriteLine("What block would you like to add");
+            for (int i = 0; i < blocks.Count; i++)
+            {
+                Console.WriteLine(blocks[i].Name);
             }
+
             int choice = int.Parse(Console.ReadLine());
             return blocks[choice];
         }
