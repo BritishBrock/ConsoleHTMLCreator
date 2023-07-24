@@ -16,7 +16,7 @@ namespace ConsoleHTMLCreator
         }
         private static void saveHTMLFile(string file)
         {
-            string output = "C:\\Users\\Brock\\source\\repos\\CreadorDePlantillaHtml\\CreadorDePlantillaHtml\\output\\out.html";
+            string output = "C:\\projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\output\\out.html";
             StreamWriter outputWriter = new StreamWriter(output);
             outputWriter.Write(file);
             outputWriter.Close();
@@ -29,7 +29,7 @@ namespace ConsoleHTMLCreator
             {
                 if (HtmlSections[i] != null)
                 {
-                    file.Append(HtmlSections[i]);
+                    file.Append(HtmlSections[i].SectionBlock.Content);
                 }
             }
             file.AppendLine("<html>");

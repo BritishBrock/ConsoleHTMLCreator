@@ -20,6 +20,7 @@
                 Console.WriteLine("would you like to exit");
                 exit = Console.ReadLine();
             } while (exit.ToLower() != "yes");
+            HtmlCreator.createHTMLFile();
         }
     
     }
