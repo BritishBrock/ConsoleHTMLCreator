@@ -1,0 +1,15 @@
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\bin\Debug\net6.0\ConsoleHTMLCreator.exe
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\bin\Debug\net6.0\ConsoleHTMLCreator.deps.json
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\bin\Debug\net6.0\ConsoleHTMLCreator.runtimeconfig.json
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\bin\Debug\net6.0\ConsoleHTMLCreator.dll
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\bin\Debug\net6.0\ConsoleHTMLCreator.pdb
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.csproj.AssemblyReference.cache
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.AssemblyInfoInputs.cache
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.AssemblyInfo.cs
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.csproj.CoreCompileInputs.cache
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.dll
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\refint\ConsoleHTMLCreator.dll
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.pdb
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ConsoleHTMLCreator.genruntimeconfig.cache
+C:\projects\ConsoleHTMLCreator\ConsoleHTMLCreator\obj\Debug\net6.0\ref\ConsoleHTMLCreator.dll
