@@ -1,13 +1,4 @@
-<div class="section-responsive-0"
-style="
-	display:flex;
-	justify-content:space-around;
-	height:100%;
-	width:100%;
-	align-items:center;
-	flex-wrap:wrap;
-"
->
+<div class="section-responsive-0">
 	<div style="width:300px;height:500px;background-color:gray"></div>
 	<div style="width:300px;height:500px;background-color:gray"></div>
 	<div style="width:300px;height:500px;background-color:gray"></div>
