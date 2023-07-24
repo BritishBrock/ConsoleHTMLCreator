@@ -21,5 +21,19 @@ namespace ConsoleHTMLCreator
             outputWriter.Write(file);
             outputWriter.Close();
         }
+        public static void editSection(int index) {
+            Console.WriteLine("What Block Would you like to add to this section");
+            string blockType = Console.ReadLine();
+             switch (blockType){
+                case "Basic" :
+                    showBlocks(BlocksLoader.Basic);
+                    break;
+            };
+        }
+        public static void showBlocks(List<Blocks> blocks) {
+            for (int i = 0; i < blocks.Count; i++) {
+                Console.WriteLine(blocks[i].Name);
+            }
+        }
     }
 }

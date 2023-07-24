@@ -8,7 +8,7 @@ namespace ConsoleHTMLCreator
 {
     internal class Section
     {
-        Blocks SectionBlock { get; set; }
+        public Blocks SectionBlock { get; set; }
         public Section(Blocks Block)
         {
             this.SectionBlock = Block;
