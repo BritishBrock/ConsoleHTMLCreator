@@ -15,22 +15,23 @@ namespace ConsoleHTMLCreator
         private static void saveHTMLFile(string file)
         {
             
-            string output = "C:\\projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\output\\out.html";
+            string output = Path.GetFullPath(@"../../../output/out.html");
             StreamWriter outputWriter = new StreamWriter(output);
             outputWriter.Write(file);
             outputWriter.Close();
             saveCSSFile();
             Program.p.Close();
-            Program.p.StartInfo = new ProcessStartInfo("C:\\projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\output\\out.html")
+            Program.p.StartInfo = new ProcessStartInfo(Path.GetFullPath(@"../../../output/out.html"))
             {
                 UseShellExecute = true
             };
             Program.p.Start();
+
         }
         private static void saveCSSFile()
         {
-            
-            string output = "C:\\projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\output\\out.css";
+
+            string output = Path.GetFullPath(@"../../../output/out.css");
             StreamWriter outputWriter = new StreamWriter(output);
             outputWriter.Write(CssCreator.getCssFromBoxes(  Section.HtmlSections));
             outputWriter.Close();
@@ -47,7 +48,7 @@ namespace ConsoleHTMLCreator
                     file.Append(Section.HtmlSections[i].SectionBlock.Content);
                 }
             }
-            file.Append("</body></html>");
+            file.Append("<script type=\"text/javascript\" src=\"https://livejs.com/live.js\"></script></body></html>");
             saveHTMLFile(file.ToString());
         }
 

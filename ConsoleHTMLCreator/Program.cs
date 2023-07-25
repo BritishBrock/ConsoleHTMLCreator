@@ -6,8 +6,7 @@ namespace ConsoleHTMLCreator
 
         public static Process p = new Process();
         static void Main() {
-
-
+           
             Console.WriteLine("how many sections do you want");
             int amountSections = int.Parse(Console.ReadLine());
             Section.setSections(amountSections);
