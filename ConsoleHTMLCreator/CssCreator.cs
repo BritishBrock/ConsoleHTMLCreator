@@ -16,11 +16,14 @@ namespace ConsoleHTMLCreator
             List<string> names = new List<string>();
             for (int i = 0; i < sections.Length; i++)
             {
-                if (!(names.Contains(sections[i].SectionBlock.Name)))
-                {
-                    css.Append(sections[i].SectionBlock.CSS);
-                    names.Add(sections[i].SectionBlock.Name);
+                if (sections[i] != null) {
+                    if (!(names.Contains(sections[i].SectionBlock.Name)))
+                    {
+                        css.Append(sections[i].SectionBlock.CSS);
+                        names.Add(sections[i].SectionBlock.Name);
+                    }
                 }
+                
             }
             return css.ToString();
         }

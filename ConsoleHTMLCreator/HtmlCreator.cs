@@ -33,7 +33,7 @@ namespace ConsoleHTMLCreator
 
             string output = Path.GetFullPath(@"../../../output/out.css");
             StreamWriter outputWriter = new StreamWriter(output);
-            outputWriter.Write(CssCreator.getCssFromBoxes(  Section.HtmlSections));
+            outputWriter.Write(CssCreator.getCssFromBoxes( Section.HtmlSections));
             outputWriter.Close();
         }
         public static void createHTMLFile()

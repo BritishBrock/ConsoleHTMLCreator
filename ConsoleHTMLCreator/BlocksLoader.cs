@@ -13,6 +13,7 @@ namespace ConsoleHTMLCreator
 
         static List<Blocks> loadBlocks(string fileLocation)
         {
+           
             string route = Path.GetFullPath(@"../../../webBlocks")+"\\" + fileLocation + "\\";
             List<Blocks> aux = new List<Blocks>();
             int index = 0;
