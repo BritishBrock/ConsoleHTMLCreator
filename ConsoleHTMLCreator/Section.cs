@@ -17,10 +17,13 @@ namespace ConsoleHTMLCreator
         }
         public static void setSections(int amount)
         {
+            //set the global amount of sections the html will have
             HtmlSections = new Section[amount];
         }
         public static void editSection(int index)
         {
+            //Chooses the type of blocks you would like to use depending on the type.
+            //there will be more type of blocks to add.
             Console.WriteLine("What Block Would you like to add to this section: basic or responsive");
             string blockType = Console.ReadLine().ToLower();
             switch (blockType)
@@ -40,6 +43,7 @@ namespace ConsoleHTMLCreator
             string movement;
             do
             {
+                //displays to the user the visual file in a block, where it gives you a preview of the html to help you choose which one to pick
                 Console.Clear();
                 int count = 0;
                 if (blocks.Count != null) count = blocks.Count;
@@ -53,17 +57,21 @@ namespace ConsoleHTMLCreator
 
             } while (movement.ToLower() != "back");
             Console.WriteLine("What block would you like to add");
+            //loops through the blocks array and helps you choose which one you want based on name 
+            //#TODO maybe add a paginator where if the amount is higher than ten you can go through the list, or show them next to eatch other
             for (int i = 0; i < blocks.Count; i++)
             {
-                Console.WriteLine(blocks[i].Name);
+                Console.WriteLine(i + "-" +blocks[i].Name);
             }
 
             int choice = int.Parse(Console.ReadLine());
+
             return blocks[choice];
         }
 
         private static void setSectionWithBlock(Blocks block, int sectionIndex)
         {
+            //sets the sections block 
             Section.HtmlSections[sectionIndex] = new Section(block);
         }
     }

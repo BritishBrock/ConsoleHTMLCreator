@@ -8,16 +8,18 @@ namespace ConsoleHTMLCreator
 {
     static class BlocksLoader
     {
+        //diferent type of blocks based on the folders they are in 
         public static List<Blocks> Basic { get; set; } = loadBlocks("Basic");
         public static List<Blocks> Responsive { get; set; } = loadBlocks("Responsive");
 
         static List<Blocks> loadBlocks(string fileLocation)
         {
-           
+           //gets the folder route based on the fileLocation which is the type
             string route = Path.GetFullPath(@"../../../webBlocks")+"\\" + fileLocation + "\\";
             List<Blocks> aux = new List<Blocks>();
             int index = 0;
             StreamReader sr;
+            //goes throught the folder and grabs the files that are in it, but files can only be 0.txt,0.visual.txt and 0.css.txt, but will change in the future to be able to name it anything you want.
             while (File.Exists(route + index + ".txt"))
             {
                 sr = new StreamReader(route + index + ".txt");

@@ -13,6 +13,7 @@ namespace ConsoleHTMLCreator
         public string Visual { get; set; }
         public string Content { get; set; }
 
+        //contains the name of the type of block plus file name, content which contains the html, the css that contains css and the visual which is the preview of the html that you will choose
         public Blocks(string Name, string Content,string css, string visual)
         {
             this.Name = Name;
