@@ -61,9 +61,12 @@ namespace ConsoleHTMLCreator
             Console.WriteLine("What block would you like to add");
             //loops through the blocks array and helps you choose which one you want based on name 
             //#TODO maybe add a paginator where if the amount is higher than ten you can go through the list, or show them next to eatch other
-            for (int i = 0; i < blocks.Count; i++)
+
+            for (int i = 0; i < blocks.Count;)
             {
-                Console.WriteLine(i + "-" +blocks[i].Name);
+                Console.WriteLine(i + "-" + blocks[i].Name + "          " + (i + 1 < blocks.Count ? i + 1 + "-" + blocks[i + 1].Name + "          " : "") + (i + 2 < blocks.Count ? i + 2 + "-" + blocks[i + 2].Name + "          " : ""));
+                i += 3;
+                
             }
 
             int choice = int.Parse(Console.ReadLine());
