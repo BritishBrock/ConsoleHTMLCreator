@@ -29,9 +29,11 @@ namespace ConsoleHTMLCreator
             switch (blockType)
             {
                 case "basic":
+                    if (BlocksLoader.Basic.Count == 0) return;
                     setSectionWithBlock(showBlocks(BlocksLoader.Basic), index);
                     break;
                 case "responsive":
+                    if (BlocksLoader.Responsive.Count == 0) return;
                     setSectionWithBlock(showBlocks(BlocksLoader.Responsive), index);
                     break;
             };
