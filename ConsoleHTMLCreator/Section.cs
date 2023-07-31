@@ -52,7 +52,7 @@ namespace ConsoleHTMLCreator
                 Console.WriteLine(Math.Abs(index) % blocks.Count + "/" + (count - 1));
                 Console.WriteLine(blocks[Math.Abs(index) % blocks.Count].Name);
                 Console.WriteLine(blocks[Math.Abs(index) % blocks.Count].Visual);
-                Console.WriteLine("<<< >>>");
+                Console.WriteLine("Left<<<       >>>Right");
                 movement = Console.ReadLine();
                 if (movement.ToLower() == "left") index--;
                 if (movement.ToLower() == "right") index++;
@@ -61,14 +61,11 @@ namespace ConsoleHTMLCreator
             Console.WriteLine("What block would you like to add");
             //loops through the blocks array and helps you choose which one you want based on name 
             //#TODO maybe add a paginator where if the amount is higher than ten you can go through the list, or show them next to eatch other
-
             for (int i = 0; i < blocks.Count;)
             {
                 Console.WriteLine(i + "-" + blocks[i].Name + "          " + (i + 1 < blocks.Count ? i + 1 + "-" + blocks[i + 1].Name + "          " : "") + (i + 2 < blocks.Count ? i + 2 + "-" + blocks[i + 2].Name + "          " : ""));
                 i += 3;
-                
             }
-
             int choice = int.Parse(Console.ReadLine());
 
             return blocks[choice];

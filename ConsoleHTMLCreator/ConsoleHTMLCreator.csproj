@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="output\" />
+    <Folder Include="webBlocks\Basic\" />
     <Folder Include="webBlocks\Responsive\" />
   </ItemGroup>
 
