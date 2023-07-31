@@ -14,6 +14,7 @@ namespace ConsoleHTMLCreator
 
         static List<Blocks> loadBlocks(string fileLocation)
         {
+            //test
            //gets the folder route based on the fileLocation which is the type
             string route = Path.GetFullPath(@"../../../webBlocks")+"\\" + fileLocation + "\\";
             List<Blocks> aux = new List<Blocks>();
