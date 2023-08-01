@@ -31,11 +31,10 @@ namespace ConsoleHTMLCreator
                     if (file.Contains(".png"))
                         img.Add((Bitmap)Image.FromFile(file));
             }
-            Console.WriteLine(blocks[0].Count);
+
             for(int i = 0; i < blocks[0].Count; i++) {
                 aux.Add(new Blocks(fileLocation + "_" + blocks[0][i], blocks[1][i], blocks[2][i], img[i]));
             }
-            Console.WriteLine(aux.Count);
             return aux;
         }
     }
