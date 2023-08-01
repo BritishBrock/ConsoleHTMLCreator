@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LlinQBaseeDdh5GlZLFyeu6jdGABzEDzioJW8kgtrwqbqshkHoUdyot7Qd/H//fa1hhVV4eYzA7vEqfuC52wmQ==",
+  "dgSpecHash": "wzjuKrSs6LahVTpXdyoPswG586AmA/tjCCQ7+R7um6ptXu6CP8zx55qzK3b6kqCyVBbzHWD+19R6UaNdAlc1MQ==",
   "success": true,
   "projectFilePath": "C:\\Projects\\ConsoleHTMLCreator\\ConsoleHTMLCreator\\ConsoleHTMLCreator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Devnubbius\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Devnubbius\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

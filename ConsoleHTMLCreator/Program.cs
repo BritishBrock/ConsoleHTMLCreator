@@ -10,22 +10,25 @@ namespace ConsoleHTMLCreator
         public static Process p = new Process();
         static void Main() {
             //pick between creating files quickly or to create html from those files
+
+
+
+
             Console.WriteLine("would you like to create a file, or would you like to create a html page");
             string choice = Console.ReadLine();
-            switch(choice)
+            switch (choice)
             {
-                case "Html":
+                case "html":
                     CreateHtml();
-                break;
+                    break;
                 case "File":
                     CreateFile();
-                break;
+                    break;
             }
 
         }
+ 
 
-
-        
 
         static void CreateHtml() {
             //Asking the amount of sections the html page will have
