@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Xml.Linq;
+
 namespace ConsoleHTMLCreator
 {
     internal class Program{
@@ -52,11 +54,15 @@ namespace ConsoleHTMLCreator
 
         static void CreateFile() {
             string fileLocation = Console.ReadLine();
-            string Name = Console.ReadLine();
-            string path = Path.GetFullPath(@"../../../webBlocks") + "\\" + fileLocation + "\\";
-            new StreamWriter(path+ Name+".css.txt");
-            new StreamWriter(path + Name+".html.txt");
-            new StreamWriter(path + Name+".visual.txt");
+            string Name;
+            do
+            {
+                Name = Console.ReadLine();
+                string path = Path.GetFullPath(@"../../../webBlocks") + "\\" + fileLocation + "\\";
+                new StreamWriter(path + Name + ".css.txt");
+                new StreamWriter(path + Name + ".html.txt");
+                new StreamWriter(path + Name + ".visual.txt");
+            } while (Name != "exit");
 
         }
 
