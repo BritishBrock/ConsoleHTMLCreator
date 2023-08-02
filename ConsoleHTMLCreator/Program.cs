@@ -25,7 +25,7 @@ namespace ConsoleHTMLCreator
                     CreateFile();
                     break;
             }
-
+           
         }
  
 

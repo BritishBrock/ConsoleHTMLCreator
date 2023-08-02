@@ -73,18 +73,19 @@ namespace ConsoleHTMLCreator
         }
         public static void LoadVisual(Bitmap original) {
             Bitmap bit = new Bitmap(original, new Size(original.Width / 32, original.Height / 32));
-            for (int i = 0; i < bit.Height; i++)
+
+            for (int i = 0,j = 0; i * j <= (bit.Height-1) * (bit.Width-1); i++)
             {
 
-                for (int j = 0; j < bit.Width; j++)
-                {
-                    Console.ForegroundColor = GetConsoleColor(bit.GetPixel(j, i));
-                    Console.Write("█");
-
-
+                if (i > bit.Width-1) {
+                    j++;
+                    i = 0;
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
+                    Console.ForegroundColor = GetConsoleColor(bit.GetPixel(i, j));
+                    Console.Write("█");
             }
+            Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
         }
 
