@@ -72,18 +72,25 @@ namespace ConsoleHTMLCreator
             return blocks[choice];
         }
         public static void LoadVisual(Bitmap original) {
+            
             Bitmap bit = new Bitmap(original, new Size(original.Width / 32, original.Height / 32));
-
+            ConsoleColor cached = new ConsoleColor();
+            ConsoleColor chose;
             for (int i = 0,j = 0; i * j <= (bit.Height-1) * (bit.Width-1); i++)
             {
-
                 if (i > bit.Width-1) {
                     j++;
                     i = 0;
                     Console.WriteLine();
                 }
-                    Console.ForegroundColor = GetConsoleColor(bit.GetPixel(i, j));
-                    Console.Write("█");
+                chose = GetConsoleColor(bit.GetPixel(i, j));
+                if ( cached != chose )
+                {
+                    cached = chose;
+                    Console.ForegroundColor = cached;
+                }
+               
+                Console.Write("█");
             }
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
