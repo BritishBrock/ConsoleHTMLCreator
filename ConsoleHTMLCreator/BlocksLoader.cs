@@ -16,9 +16,13 @@ namespace ConsoleHTMLCreator
 
         static List<Blocks> loadBlocks(string fileLocation)
         {
-           //gets the folder route based on the fileLocation which is the type
-            string route = Path.GetFullPath(@"../../../webBlocks")+"\\" + fileLocation + "\\";
+            //gets the folder route based on the fileLocation which is the type
             List<Blocks> aux = new List<Blocks>();
+            string route = Path.GetFullPath(@"../../../webBlocks") + "\\" + fileLocation + "\\";
+            if (!Directory.Exists(route))
+            {
+                return aux;
+            }
             List<List<string>> blocks = new List<List<string>> { new List<string> { },new List<string> { }, new List<string> { } };
             List<Bitmap> img = new List<Bitmap>() { };
             foreach(string file in Directory.GetFiles(route, "*.*")) {

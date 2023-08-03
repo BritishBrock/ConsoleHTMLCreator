@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="output\" />
-    <Folder Include="webBlocks\Basic\" />
   </ItemGroup>
 
   <ItemGroup>
